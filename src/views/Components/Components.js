@@ -7,14 +7,14 @@ import { Link } from "react-router-dom";
 import { makeStyles } from "@material-ui/core/styles";
 // @material-ui/icons
 // core components
-import Header from "components/Header/Header.js";
-import Footer from "components/Footer/Footer.js";
-import GridContainer from "components/Grid/GridContainer.js";
-import GridItem from "components/Grid/GridItem.js";
-import Button from "components/CustomButtons/Button.js";
-import Parallax from "components/Parallax/Parallax.js";
+import Header from "../../components/Header/Header.js";
+import Footer from "../../components/Footer/Footer.js";
+import GridContainer from "../../components/Grid/GridContainer.js";
+import GridItem from "../../components/Grid/GridItem.js";
+import Button from "../../components/CustomButtons/Button.js";
+import Parallax from "../../components/Parallax/Parallax.js";
 // sections for this page
-import HeaderLinks from "components/Header/HeaderLinks.js";
+import HeaderLinks from "../../components/Header/HeaderLinks.js";
 import SectionBasics from "./Sections/SectionBasics.js";
 import SectionNavbars from "./Sections/SectionNavbars.js";
 import SectionTabs from "./Sections/SectionTabs.js";
@@ -28,7 +28,7 @@ import SectionLogin from "./Sections/SectionLogin.js";
 import SectionExamples from "./Sections/SectionExamples.js";
 import SectionDownload from "./Sections/SectionDownload.js";
 
-import styles from "assets/jss/material-kit-react/views/components.js";
+import styles from "../../assets/jss/material-kit-react/views/components.js";
 
 const useStyles = makeStyles(styles);
 
@@ -48,7 +48,9 @@ export default function Components(props) {
         }}
         {...rest}
       />
-      <Parallax image={require("assets/img/Individuum_main_bg.jpg").default}>
+      <Parallax
+        image={require("../../assets/img/Individuum_main_bg.jpg").default}
+      >
         <div className={classes.container}>
           <GridContainer>
             <GridItem>

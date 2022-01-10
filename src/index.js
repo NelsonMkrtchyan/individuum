@@ -3,14 +3,14 @@ import ReactDOM from "react-dom";
 // import { createBrowserHistory } from "history";
 import { Route, Switch, HashRouter } from "react-router-dom";
 
-import "assets/scss/material-kit-react.scss?v=1.10.0";
+// import "assets/scss/material-kit-react.scss?v=1.10.0";
 
 // pages for this product
-import Components from "views/Components/Components.js";
-import LandingPage from "views/LandingPage/LandingPage.js";
-import ProfilePage from "views/ProfilePage/ProfilePage.js";
-import LoginPage from "views/LoginPage/LoginPage.js";
-
+import Components from "./views/Components/Components.js";
+import LandingPageDefault from "./views/LandingPage_default/LandingPageDefault.js";
+import LandingPage from "./views/LandingPage/LandingPage.js";
+import ProfilePage from "./views/ProfilePage/ProfilePage.js";
+import LoginPage from "./views/LoginPage/LoginPage.js";
 // var hist = createBrowserHistory();
 
 ReactDOM.render(
@@ -18,7 +18,6 @@ ReactDOM.render(
   <HashRouter
     basename={"/"}
     getUserConfirmation={(message, callback) => {
-      // this is the default behavior
       const allowTransition = window.confirm(message);
       callback(allowTransition);
     }}
@@ -26,6 +25,7 @@ ReactDOM.render(
   >
     <Switch>
       <Route path="/landing-page" component={LandingPage} />
+      <Route path="/landing-page-default" component={LandingPageDefault} />
       <Route path="/profile-page" component={ProfilePage} />
       <Route path="/login-page" component={LoginPage} />
       <Route path="/" component={Components} />
